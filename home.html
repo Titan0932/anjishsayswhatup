@@ -191,10 +191,12 @@
                     document.getElementById('location').textContent=data['location']
                     document.getElementById('pub-repos').textContent=data['public_repos']
                     document.getElementById('acc-date').textContent=data['created_at'].slice(0,10)
-                    
+                    const hideLoading=function(){
                     document.getElementById('loading').hidden=true
                     document.getElementById('whole-container').hidden=false
                     document.getElementById('user_url').href=data['html_url']
+                    }
+                    window.setTimeout(hideLoading,2500)
                   })                 
                 </script>
         </main>
