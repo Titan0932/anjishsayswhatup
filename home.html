@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title> Anjish's GitHub Portfolio</title>
+
+      <!--FOR RESPONSIVENESS-->
+      <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+
+
+        <!--LINKS FOR NAVBAR-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+        crossorigin="anonymous">
+        <link href="styles/style1.css" rel='stylesheet' type='text/css'>
+
+        <!--FOR LOADING SCREEN FONT-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet"> 
+        
+<!--Font for the main content-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Merienda&family=Open+Sans:wght@700&display=swap" rel="stylesheet"> 
+
+    </head>
+
+    <body>
+
+        <div id='loading' >
+            <p><b>LOADING!!!</b> </p>
+            <img src="https://i.gifer.com/WME8.gif">
+
+
+        </div>
+
+
+      
+
+        <div class="whole-container" id='whole-container' hidden>  <!--Display after loading gif-->
+
+        <header>
+
+          <div class="pos-f-t">
+            <div class="collapse" id="navbarToggleExternalContent">
+              <div class="navbar" style="color: ivory;" id='nav-refs'>
+                
+                <a class="nav-item nav-link" href=#user>| <img src="images/home_i.png" class='icon'> Anjish</a> <a class="nav-item nav-link" href=#projects>| <img src="images/project_i.png" class='icon'> Projects &nbsp;&nbsp;&nbsp;</a> 
+                <a class="nav-item nav-link" href=#contact> | <img src="images/contacts_i.png" class='icon'> Contact </a>
+                <div class='color'></div>
+                
+              </div>
+            </div>
+            <nav class="navbar navbar-dark ">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </nav>
+          </div>
+              
+            
+        </header>
+
+        <main>
+          <div class='quote-container'>
+          <div class="quote">
+
+            <h2 id='quote'></h2>
+            <h3 id='username-user-quote'></h3>
+
+          </div>
+        </div>
+
+        
+        <div class="about-user" id="user" >
+
+          <div class="gitHub-logo">
+            <img src='https://www.cloudsavvyit.com/p/uploads/2020/10/d6528811.png?width=1198&trim=1,1&bg-color=000&pad=1' alt='GitHub-Logo'>
+          </div>
+
+          <div class="info-wrapper">
+          <div class='user-info'>
+            <img alt='Profile-pic' id="user_dp">
+            <section>
+            <h2 id='name'></h2>
+            <h5 id='username-userinfo'></h5>
+            <h3 id='location'></h3>
+            <div class="follow"> 
+              <h5> Followers</h5>
+              <h5> Following</h5>
+              <h5 id='followers'></h5>
+              <h5 id='following'></h5>
+            </div>
+          </section>
+          
+          </div>
+          <div class="other-details">
+            <h2 id='acc-date'></h2>
+            <h2>=> Joined Github...</h2>
+            <h2 id='pub-repos'></h2>
+            <h2> => Public Repositories contributed...</h2>
+
+          </div>
+        </div>
+        </div>
+        
+        <div class="projects-wrapper" id="projects">
+
+          <div class="project-heading"> <img src="github.png"> <h2 id='project-heading'>My Projects</h2></div>
+          
+          <div class="project-content">
+
+            <a target="_blank" id='aqi-link'><div class="aqi">
+              <h3 id='aqi-name'></h3>
+              
+              <h4 id='aqi-description'></h4>
+              <h5 id='aqi-date'></h5>
+            </div>
+            </a>
+
+            <a target="_blank" id='alarm-link'><div class="alarm">
+              <h3 id='alarm-name'></h3>
+              <h4 id='alarm-description'></h4>
+              <h5 id='alarm-date'></h5>
+            </div>
+            </a>
+
+            <a target="_blank" id='memeGen-link'><div class="memeGen">
+              <h3 id='memeGen-name'></h3>
+              <h4 id='memeGen-description'></h4>
+              <h5 id='memeGen-date'></h5>
+            </div>
+            </a>
+
+
+            <a target="_blank" id='pythonReps-link'><div class="pythonReps">
+              <h3 id='pythonReps-name'></h3>
+              <h4 id='pythonReps-description'></h4>
+              <h5 id='pythonReps-date'></h5>
+            </div>
+            </a>
+            <div class='more-button'>
+            <a id='user_url' target="_blank"> <img src='https://cdn2.scratch.mit.edu/get_image/gallery/29360005_170x100.png'></a>
+          </div>
+                                                                          <script>
+                                                                            fetch('https://api.github.com/users/Titan0932/repos')
+                                                                            .then(repos_data=>repos_data.json())
+                                                                            .then(function(info) {
+                                                                  
+                                                                                                                                                                                                                                  
+                                                                                let index=[8,4,3,2]
+                                                                                let titles=['aqi','alarm', 'pythonReps','memeGen']
+                                                                                for(let i=0; i<4; i++){
+                                                                                  let title=titles[i]
+                                                                                console.log(info[index[i]]['name'])
+                                                                                document.getElementById(title+'-name').textContent=info[index[i]]['name']
+                                                                                
+                                                                                document.getElementById(title+'-date').textContent=info[index[i]]['created_at'].slice(0,10)
+                                                                                
+                                                                                document.getElementById(title+'-description').textContent='< '+ info[index[i]]['description'] + ' />'
+                                                                                
+                                                                                document.getElementById(title+'-link').href= info[index[i]]['html_url']
+                                                                                
+                                                                                
+                                                                                }
+                                                                                
+                                                                            })
+                                                                          </script>
+        </div>     
+        </div>
+        <script>
+          fetch('https://api.github.com/users/Titan0932')
+                  .then(response=>response.json())
+                  .then(function(data) {
+                    
+                    document.getElementById('user_dp').src=data['avatar_url']
+                    document.getElementById('quote').textContent=data['bio']
+                    document.getElementById('username-user-quote').textContent='-'+data['login']
+                    document.getElementById('username-userinfo').textContent=data['login']
+                    
+                   document.getElementById('name').textContent=data['name']
+                    document.getElementById('followers').textContent=data['followers']
+                    document.getElementById('following').textContent=data['following']
+                    document.getElementById('location').textContent=data['location']
+                    document.getElementById('pub-repos').textContent=data['public_repos']
+                    document.getElementById('acc-date').textContent=data['created_at'].slice(0,10)
+                    
+                    document.getElementById('loading').hidden=true
+                    document.getElementById('whole-container').hidden=false
+                    document.getElementById('user_url').href=data['html_url']
+                  })                 
+                </script>
+        </main>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+        crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+        crossorigin="anonymous"></script>
+
+    
+    </div>    
+
+    <footer id='contact'>
+    
+    <a target="_blank" href='https://www.instagram.com/anjish_awesome/'><img src='https://www.shareicon.net/data/256x256/2016/11/16/854129_round_512x512.png' id='icon'></a>
+    <a target="_blank" href='https://www.facebook.com/anjishrocks/'><img src='https://facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png?w=512&h=512' id='icon'> </a>
+    <a href='mailto:anjishpradhananga@outlook.com'><img src='https://cdn2.iconfinder.com/data/icons/circular-icon-set/256/Mail.png' id='icon'></a>
+    <br>
+    <h3>&copy Anjish Pradhananga</h3>
+
+
+    </footer>
+
+
+    </body>
+
+
+
+</html>

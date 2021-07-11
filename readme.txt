@@ -1,0 +1,1 @@
+This is a simple portfolio webiste for my github account! Made with HTML,CSS and scraping done from JavaScript! It contains public data from my Github account.
