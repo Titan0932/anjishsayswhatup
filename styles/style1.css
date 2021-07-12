@@ -16,6 +16,7 @@ body{
     background-color:var(--content-theme);
     font-family: 'Lato', sans-serif;
     color:rgb(255, 255, 240); 
+    
 }
 
 
@@ -67,7 +68,9 @@ opacity:0}
 }
 
 
-.whole-container{font-family: 'Crimson Text', serif;}
+.whole-container {
+    font-family: 'Crimson Text', serif;
+}
 
 
 
@@ -196,7 +199,7 @@ main .about-user .gitHub-logo img{
 
 main .about-user .info-wrapper{
     height:100%;
-
+    
 }
 
 main .about-user .user-info{
@@ -280,6 +283,7 @@ main .projects-wrapper{
     height: 150vh;
     width: 100%;
     display: flex;
+    
 }
 
 
@@ -288,12 +292,12 @@ main .project-heading{
     position:absolute;
     
     max-width: 75%;
-    max-height: 25%;
+    max-height: 20%;
     max-width: fit-content;
     
-    top:-24.5rem;
-    right:7.5rem;
-   
+    top:-22.5rem;
+    right:7rem;
+
     
     transform: rotate(-90deg);
     transform-origin: right;   
@@ -317,6 +321,7 @@ main .project-heading img{
     width: 50%;
     font-family: 'Open Sans', sans-serif;
     color: var(--content-theme);
+    
 }
 main .projects-wrapper .project-content{
 
@@ -385,6 +390,7 @@ main .projects-wrapper .more-button{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    
 }
 
 main .projects-wrapper .more-button img{
